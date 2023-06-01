@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Console.log investigations</title>
+    <style>
+        /* Center align the form content */
+        form {
+            text-align: center;
+        }
+        
+        /* Style the form labels */
+        form label {
+            display: block; /* Display labels as block elements */
+            margin-bottom: 5px; /* Add some vertical spacing */
+            text-align: center; /* Center align the labels */
+        }
+
+
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        /* Style the video element to cover the entire container */
+        #video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        
+        /* Add some content to display on top of the video */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+        body{
+            background-color:black;
+            color:white;
+        }
+        .orange{
+            color:orangered;
+        }
+        
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace 'your_username' and 'your_password' with the desired credentials
+            if (username === 'thembirobin@gmail.com' && password === 'samuel') {
+                window.location.href = '2.html';  // Redirect to xyz.html after successful login
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <h1 style="position:absolute;top:0px;left:600px">Welcome to Yaetchts console.log investigations</h1>
+    <h1 style="position:absolute;top:40px;left:606px">Welcome:</h1>
+    <h2 style="position:absolute;top:380px;left:650px">Login </h2>
+    <img src="IMG_20220311_135742_708.jpg" alt="" height="100" width="100" style="position:absolute;top:150px;left:620px">
+    
+    <form onsubmit="validateForm(event)" style="position:absolute;top:280px;left:600px">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required=""><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required=""><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    
+
+
+</body></html>
